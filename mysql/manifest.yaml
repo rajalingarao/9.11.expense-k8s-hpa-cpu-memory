@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mysql
-  namespace: expense-2
+  namespace: expense
   #these labels are deployment related labels.
   labels:
     component: mysql
@@ -31,7 +31,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mysql
-  namespace: expense-2
+  namespace: expense
 spec:
   selector:
       component: mysql

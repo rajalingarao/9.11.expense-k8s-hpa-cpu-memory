@@ -2,7 +2,7 @@ kind: Pod
 apiVersion: v1
 metadata:
   name: debug
-  namespace: expense-2
+  namespace: expense
 spec:
     containers:
     - name: debug
