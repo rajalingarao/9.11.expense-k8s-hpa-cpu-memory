@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: debug
+  namespace: expense
+spec:
+    containers:
+    - name: debug
+      image: lingadevops/debug:v1.1
+      
+# kubectl exec -it debug -n expense -- /bin/bash
+# mysql -h mysql -u root -pExpenseApp@1

@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: expense
+  #these labels are deployment related labels.
+  labels:
+    component: mysql
+    project: expense
+    tier: db
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      component: mysql
+      project: expense
+      tier: db
+#below is pod definition
+  template:
+    metadata:
+     labels:
+       component: mysql
+       project: expense
+       tier: db
+    spec:
+       containers:
+       - name: mysql 
+         image: lingadevops/mysql:v1.1 # Please use your own image here. lingadevops/mysql:v1.0           
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+  namespace: expense
+spec:
+  selector:
+      component: mysql
+      project: expense
+      tier: db
+  ports:
+  - protocol: TCP
+    port: 3306 #service-port
+    targetPort: 3306 #target-port
+           
+
