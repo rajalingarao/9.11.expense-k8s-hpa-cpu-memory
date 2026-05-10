@@ -102,5 +102,9 @@ spec:
         type: Utilization
         averageUtilization: 20
 
+
+Note: Create another server using centOS and login and try below commands.
+
+
 $yum install httpd-tools -y
-ab -n 10000 -c 100 "http://a5cc80af4a20545da8e9840001bcd083-446768232.us-east-1.elb.amazonaws.com/"
+ab -n 10000 -c 100 "http://a6e42020581304bf2b1b765c9ead1999-1437211014.us-east-1.elb.amazonaws.com/"
