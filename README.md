@@ -103,8 +103,11 @@ spec:
         averageUtilization: 20
 
 
-Note: Create another server using centOS and login and try below commands.
+Note: Create another server using RHEL/CentOS and login and try below commands.
 
-
-$yum install httpd-tools -y
-ab -n 10000 -c 100 "http://a6e42020581304bf2b1b765c9ead1999-1437211014.us-east-1.elb.amazonaws.com/"
+```
+yum install httpd-tools -y
+```
+```
+ab -n 10000 -c 100 "http://a8d1db60543d4414388b005aea94f7bb-1085948567.us-east-1.elb.amazonaws.com/"
+```
